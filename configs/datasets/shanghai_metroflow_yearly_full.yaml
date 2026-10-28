@@ -1,0 +1,57 @@
+{
+  "dataset": {
+    "name": "shanghai_metroflow",
+    "adapter": "csv_long",
+    "raw_path": "data/raw/metroData_InOutFlow.csv",
+    "freq": "10min",
+    "date_column": "date",
+    "time_column": "startTime",
+    "datetime_format": "%Y%m%d%H%M%S",
+    "series_id_column": "station",
+    "target_source_columns": [
+      "inFlow",
+      "outFlow"
+    ],
+    "target_alias": "flow",
+    "aggregation": "sum",
+    "feature_columns": [
+      "flow",
+      "tod_sin",
+      "tod_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "time_grid": "observed",
+    "chunksize": 500000
+  },
+  "debug": {
+    "enabled": false
+  },
+  "yearly_cache": {
+    "cache_dir": "data/cache/shanghai_metroflow_yearly_full",
+    "station_selection": "all"
+  },
+  "task_stream": {
+    "strategy": "yearly_periods",
+    "split_ratio": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    }
+  },
+  "window": {
+    "input_length": 12,
+    "horizon": 12,
+    "stride": 1,
+    "input_columns": [
+      "flow",
+      "tod_sin",
+      "tod_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "target_column": "flow",
+    "fill_method": "ffill_zero",
+    "fill_value": 0.0
+  }
+}

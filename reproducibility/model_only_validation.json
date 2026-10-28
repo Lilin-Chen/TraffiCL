@@ -1,0 +1,7 @@
+{
+  "original_model_computation": "unchanged",
+  "constructor_parameter_equality": "PASS",
+  "prediction_bitwise_equality": "PASS",
+  "unrelated_model_registration": "rejected",
+  "training_rerun": false
+}

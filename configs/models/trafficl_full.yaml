@@ -1,0 +1,24 @@
+{
+  "model": {
+    "name": "expert_lite_inverted_traffic",
+    "d_model": 64,
+    "nhead": 4,
+    "num_layers": 2,
+    "dim_feedforward": 128,
+    "dropout": 0.1,
+    "max_series": 65536,
+    "adapter_bottleneck": 16,
+    "dynamic_domain_experts": true,
+    "dynamic_state_experts": true,
+    "max_domain_experts": 8,
+    "max_state_experts_per_domain": 9,
+    "domain_similarity_threshold": 0.85,
+    "state_similarity_threshold": 0.85,
+    "domain_prototype_update_rate": 0.1,
+    "state_prototype_update_rate": 0.1,
+    "domain_descriptor_max_windows": 2048,
+    "enable_cross_node": true,
+    "use_dynamic_node_ids": false,
+    "enable_state_expert": true
+  }
+}

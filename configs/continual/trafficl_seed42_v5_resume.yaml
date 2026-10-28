@@ -1,0 +1,41 @@
+{
+  "experiment": {
+    "name": "v5_coherent_mae",
+    "method": "expert_replay_distill",
+    "metric": "mae",
+    "evaluate_future": false,
+    "standardizer_refit": "first_task"
+  },
+  "training": {
+    "seed": 42,
+    "device": "auto",
+    "epochs": 20,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "num_workers": 0,
+    "loss": "mae",
+    "huber_beta": 1.0,
+    "target_mode": "direct",
+    "flow_feature_index": 0,
+    "standardizer_max_windows": 20000,
+    "patience": 5,
+    "min_delta": 0.0001,
+    "memory_per_task": 64,
+    "replay_weight": 0.5,
+    "distill_weight": 0.1,
+    "teacher_ema_decay": 0.99,
+    "gate_supervision_weight": 0.1,
+    "lambda_harm": 0.0,
+    "lambda_safe": 0.0,
+    "lambda_gate": 0.0,
+    "lambda_gate_sup": 0.0,
+    "lambda_mae": 0.0,
+    "lambda_bias": 0.0,
+    "shuffle_train": true,
+    "validation_loss": "mae",
+    "teacher_distillation_loss": "supervised",
+    "nonnegative_predictions": true
+  }
+}

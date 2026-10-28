@@ -1,0 +1,45 @@
+{
+  "model_name": "TraffiCL",
+  "protocol": "global_continual_stream",
+  "evaluation_policy": "full_lower_triangular_normalized_mae_mse",
+  "seed": 46,
+  "dataset_order": [
+    "caltrans_bicycle",
+    "caltrans_pedestrian",
+    "dc_nova",
+    "pvcgn_hangzhou",
+    "pvcgn_shanghai",
+    "shanghai_metroflow",
+    "minneapolis_i94",
+    "mta_subway"
+  ],
+  "state_cap": 9,
+  "domain_cap": 8,
+  "domain_threshold": 0.85,
+  "state_threshold": 0.85,
+  "global_num_tasks": 1002,
+  "global_num_tasks_expected_full": 1020,
+  "task_count_by_dataset": {
+    "caltrans_bicycle": 365,
+    "caltrans_pedestrian": 365,
+    "dc_nova": 22,
+    "pvcgn_hangzhou": 25,
+    "pvcgn_shanghai": 92,
+    "shanghai_metroflow": 121,
+    "minneapolis_i94": 7,
+    "mta_subway": 5
+  },
+  "metadata_by_dataset": {
+    "caltrans_bicycle": "$DATASET_CACHE/nonpems_daily_task_v2/caltrans_bicycle/metadata.json",
+    "caltrans_pedestrian": "$DATASET_CACHE/nonpems_daily_task_v2/caltrans_pedestrian/metadata.json",
+    "dc_nova": "$DATASET_CACHE/nonpems_daily_task_v2/dc_nova/metadata.json",
+    "pvcgn_hangzhou": "$DATASET_CACHE/nonpems_daily_task_v2/pvcgn_hangzhou/metadata.json",
+    "pvcgn_shanghai": "$DATASET_CACHE/nonpems_daily_task_v2/pvcgn_shanghai/metadata.json",
+    "shanghai_metroflow": "$DATASET_CACHE/nonpems_daily_task_v2/shanghai_metroflow/metadata.json",
+    "minneapolis_i94": "$DATASET_CACHE/minneapolis_i94_yearly_full/metadata.json",
+    "mta_subway": "$DATASET_CACHE/mta_subway_yearly_full/metadata.json"
+  },
+  "next_global_task_index": 1002,
+  "completed": true,
+  "skipped_tasks": []
+}

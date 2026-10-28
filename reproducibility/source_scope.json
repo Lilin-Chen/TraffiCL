@@ -1,0 +1,29 @@
+{
+  "unchanged_tracked_files": [
+    "data/window_generator.py",
+    "data/yearly_cached_dataset.py",
+    "models/__init__.py",
+    "models/backbones/expert_lightweight_transformer.py",
+    "models/backbones/lightweight_transformer.py",
+    "trainers/replay_consolidation.py",
+    "trainers/streaming_continual_trainer.py",
+    "trainers/streaming_forecasting_trainer.py",
+    "utils/checkpointing.py"
+  ],
+  "removed_or_import_only_changed_tracked_files": [
+    "evaluation/__init__.py",
+    "evaluation/baselines.py",
+    "evaluation/performance_matrix.py",
+    "models/backbones/__init__.py",
+    "models/backbones/evo_graph_temporal.py",
+    "models/backbones/official_open_source.py",
+    "models/backbones/open_source_graph.py",
+    "models/registry.py",
+    "trainers/__init__.py",
+    "trainers/forecasting_trainer.py"
+  ],
+  "registry_change": "Only the original V5 constructor branch is retained, with identical arguments.",
+  "shared_components": "The original backbone support and trainer files retain internal shared definitions to preserve verified computation. No baseline or ablation experiment runners or configurations are shipped.",
+  "checkpoint_resume": "The reduced source set changes run provenance. Resume runs created with this release; historical manifests are evidence, not a promise of in-place legacy checkpoint compatibility.",
+  "runner_change": "Default continual-config path selects the verified V5 MAE configuration; numerical settings and training loop are unchanged."
+}

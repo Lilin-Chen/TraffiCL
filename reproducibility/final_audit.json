@@ -1,0 +1,30 @@
+{
+  "paper_source": "TraffiCL_V5_revised/main.tex",
+  "paper_sha256": "f69d022d16810a9d9d65ffd754b608283e4d90909d5525c360b1fec02cac31d1",
+  "paper_model": "ExpertLiteInvertedTrafficTransformer",
+  "reference_run": "global_8datasets_v5_seed42",
+  "tasks": 1002,
+  "datasets": [
+    "caltrans_bicycle",
+    "caltrans_pedestrian",
+    "dc_nova",
+    "pvcgn_hangzhou",
+    "pvcgn_shanghai",
+    "shanghai_metroflow",
+    "minneapolis_i94",
+    "mta_subway"
+  ],
+  "model_config_matches_all_eight_recorded_dataset_configs": true,
+  "training_config_matches_all_eight_recorded_dataset_configs": true,
+  "experiment_config_matches_all_eight_recorded_dataset_configs": true,
+  "extracted_cache_helpers_ast_identical": true,
+  "paper_table_endpoint": "final continual stream row, before optional consolidation",
+  "complete_training_rerun": false,
+  "validation": {
+    "passed": 36,
+    "excluded": 1,
+    "exclusion_reason": "One legacy test imports the removed single-dataset experiment runner; it does not test the retained global runner in isolation.",
+    "constructor_and_forward_parity": "PASS",
+    "unrelated_model_registration_rejected": true
+  }
+}

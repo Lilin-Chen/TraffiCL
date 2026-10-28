@@ -1,0 +1,107 @@
+[
+  {
+    "run": "global_8datasets_nocons_v5_seed43",
+    "tracked_files": 19,
+    "mismatches": [],
+    "tasks": 1002,
+    "protocol": {
+      "runner": "global_continual_stream",
+      "dataset_order": [
+        "caltrans_bicycle",
+        "caltrans_pedestrian",
+        "dc_nova",
+        "pvcgn_hangzhou",
+        "pvcgn_shanghai",
+        "shanghai_metroflow",
+        "minneapolis_i94",
+        "mta_subway"
+      ],
+      "consolidation_epochs": 0
+    },
+    "provenance_sha256": "936cd238823c8d2748deda05254c70e97a73fa93a6b6eec7f3403f6e3720ecc9"
+  },
+  {
+    "run": "global_8datasets_nocons_v5_seed44",
+    "tracked_files": 19,
+    "mismatches": [],
+    "tasks": 1002,
+    "protocol": {
+      "runner": "global_continual_stream",
+      "dataset_order": [
+        "caltrans_bicycle",
+        "caltrans_pedestrian",
+        "dc_nova",
+        "pvcgn_hangzhou",
+        "pvcgn_shanghai",
+        "shanghai_metroflow",
+        "minneapolis_i94",
+        "mta_subway"
+      ],
+      "consolidation_epochs": 0
+    },
+    "provenance_sha256": "ce818c98839de3d6a64785b696928a954626d03837bcab911c588805ba6d66c9"
+  },
+  {
+    "run": "global_8datasets_nocons_v5_seed45",
+    "tracked_files": 19,
+    "mismatches": [],
+    "tasks": 1002,
+    "protocol": {
+      "runner": "global_continual_stream",
+      "dataset_order": [
+        "caltrans_bicycle",
+        "caltrans_pedestrian",
+        "dc_nova",
+        "pvcgn_hangzhou",
+        "pvcgn_shanghai",
+        "shanghai_metroflow",
+        "minneapolis_i94",
+        "mta_subway"
+      ],
+      "consolidation_epochs": 0
+    },
+    "provenance_sha256": "deed5417d0043dfc75d70a3fa107fa2896c58d198f4a2c06fecf8681a18f3d12"
+  },
+  {
+    "run": "global_8datasets_nocons_v5_seed46",
+    "tracked_files": 19,
+    "mismatches": [],
+    "tasks": 1002,
+    "protocol": {
+      "runner": "global_continual_stream",
+      "dataset_order": [
+        "caltrans_bicycle",
+        "caltrans_pedestrian",
+        "dc_nova",
+        "pvcgn_hangzhou",
+        "pvcgn_shanghai",
+        "shanghai_metroflow",
+        "minneapolis_i94",
+        "mta_subway"
+      ],
+      "consolidation_epochs": 0
+    },
+    "provenance_sha256": "e0df99c4e7ae9301fb2425f0c6f38b73f988f6fa27a0f1c240f535eabc43944a"
+  },
+  {
+    "run": "global_8datasets_v5_seed42",
+    "tracked_files": 19,
+    "mismatches": [],
+    "tasks": 1002,
+    "protocol": {
+      "runner": "global_continual_stream",
+      "dataset_order": [
+        "caltrans_bicycle",
+        "caltrans_pedestrian",
+        "dc_nova",
+        "pvcgn_hangzhou",
+        "pvcgn_shanghai",
+        "shanghai_metroflow",
+        "minneapolis_i94",
+        "mta_subway"
+      ],
+      "consolidation_epochs": 20
+    },
+    "provenance_sha256": "e277b3147255a9da28b67011c2e948a514407fa01132f456b7e94a9b27b8713e"
+  }
+]

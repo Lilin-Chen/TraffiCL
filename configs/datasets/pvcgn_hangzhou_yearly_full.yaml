@@ -1,0 +1,50 @@
+{
+  "dataset": {
+    "name": "pvcgn_hangzhou",
+    "adapter": "pkl_windows",
+    "data_dir": "data/raw/hangzhou",
+    "graph_path": "data/raw/graph_hz_conn.pkl",
+    "freq": "15min",
+    "splits": [
+      "train",
+      "val",
+      "test"
+    ],
+    "target_operation": "sum",
+    "feature_columns": [
+      "flow",
+      "tod_sin",
+      "tod_cos",
+      "dow_sin",
+      "dow_cos"
+    ]
+  },
+  "debug": {
+    "enabled": false
+  },
+  "yearly_cache": {
+    "cache_dir": "data/cache/pvcgn_hangzhou_yearly_full"
+  },
+  "task_stream": {
+    "strategy": "predefined_splits",
+    "split_ratio": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    }
+  },
+  "window": {
+    "input_length": 4,
+    "horizon": 4,
+    "stride": 1,
+    "input_columns": [
+      "flow",
+      "tod_sin",
+      "tod_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "target_column": "flow",
+    "fill_value": 0.0
+  }
+}

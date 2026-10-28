@@ -1,0 +1,42 @@
+{
+  "dataset": {
+    "name": "dc_nova",
+    "adapter": "mat_windows",
+    "mat_path": "data/raw/traffic_dataset.mat",
+    "train_x_key": "tra_X_tr",
+    "train_y_key": "tra_Y_tr",
+    "test_x_key": "tra_X_te",
+    "test_y_key": "tra_Y_te",
+    "adjacency_key": "tra_adj_mat",
+    "year": 2010,
+    "freq": "unknown",
+    "val_ratio": 0.2,
+    "feature_columns": [
+      "flow"
+    ]
+  },
+  "debug": {
+    "enabled": false
+  },
+  "yearly_cache": {
+    "cache_dir": "data/cache/dc_nova_yearly_full"
+  },
+  "task_stream": {
+    "strategy": "predefined_splits",
+    "split_ratio": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    }
+  },
+  "window": {
+    "input_length": 48,
+    "horizon": 1,
+    "stride": 1,
+    "input_columns": [
+      "flow"
+    ],
+    "target_column": "flow",
+    "fill_value": 0.0
+  }
+}

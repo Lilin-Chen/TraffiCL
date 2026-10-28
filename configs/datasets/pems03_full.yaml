@@ -1,0 +1,72 @@
+{
+  "dataset": {
+    "name": "pems03",
+    "adapter": "pems",
+    "raw_dir": "data/raw/pems03",
+    "district": 3,
+    "file_prefix": "d03_text_station_5min",
+    "freq": "5min",
+    "target_column": "flow",
+    "feature_columns": [
+      "flow",
+      "tod_sin",
+      "tod_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "add_time_features": true,
+    "allow_full_in_memory": false,
+    "max_in_memory_raw_gb": 8.0
+  },
+  "debug": {
+    "enabled": false
+  },
+  "cache": {
+    "cache_dir": "data/cache/pems03_yearly_full",
+    "station_selection": "annual_union",
+    "years": [
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2021,
+      2024
+    ]
+  },
+  "task_stream": {
+    "strategy": "time_blocks",
+    "num_tasks": 10,
+    "split_ratio": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    }
+  },
+  "window": {
+    "input_length": 12,
+    "horizon": 12,
+    "stride": 1,
+    "input_columns": [
+      "flow",
+      "tod_sin",
+      "tod_cos",
+      "dow_sin",
+      "dow_cos"
+    ],
+    "target_column": "flow",
+    "fill_method": "ffill_zero",
+    "fill_value": 0.0
+  }
+}
